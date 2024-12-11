@@ -1,60 +1,3 @@
-# # train_model.py
-
-# import os
-# import librosa
-# import numpy as np
-# import pandas as pd
-# from sklearn.model_selection import train_test_split
-# from sklearn.svm import SVC
-# import joblib
-
-# # Define the path to your audio dataset
-# DATASET_PATH = r"C:\Users\swath\Documents\Final Year Project\Emotionix\data\dataset\RAVDESS"
-
-# # Specify the path for saving the model
-# model_path = "./emotion_model.pkl"
-
-# # Create the directory if it doesn't exist
-# os.makedirs(os.path.dirname(model_path), exist_ok=True)
-
-# def extract_features_from_dataset(dataset_path):
-#     features = []
-#     labels = []
-
-#     for emotion in os.listdir(dataset_path):
-#         emotion_path = os.path.join(dataset_path, emotion)
-#         if os.path.isdir(emotion_path):
-#             print(f"Processing emotion: {emotion}")
-#             for filename in os.listdir(emotion_path):
-#                 if filename.endswith(".wav"):
-#                     print(f"Loading file: {filename}")
-#                     # Load the audio file
-#                     audio_data, sample_rate = librosa.load(os.path.join(emotion_path, filename), sr=None)
-#                     mfccs = librosa.feature.mfcc(y=audio_data, sr=sample_rate, n_mfcc=13)
-#                     mfccs_mean = np.mean(mfccs.T, axis=0)
-
-#                     features.append(mfccs_mean)
-#                     labels.append(emotion)
-
-#     print(f"Extracted {len(features)} features and {len(labels)} labels.")
-#     return np.array(features), np.array(labels)
-
-# # Extract features and labels
-# X, y = extract_features_from_dataset(DATASET_PATH)
-
-# # Split the dataset
-# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# # Train the SVM model
-# model = SVC(kernel='linear')
-# model.fit(X_train, y_train)
-
-# # Save the trained model
-# joblib.dump(model, model_path)
-
-# print("Model trained and saved successfully!")
-
-# train_model.py
 
 import os
 import librosa
@@ -65,10 +8,10 @@ import joblib
 import librosa.effects as effects
 
 # Define the path to your audio dataset
-DATASET_PATH = r"C:\Users\nishk\OneDrive\Desktop\Emotionix version 2 backup\Emotionix\data\dataset\RAVDESS"
+DATASET_PATH = r"RAVDESS"
 
 # Specify the path for saving the model
-model_path = r"C:\Users\nishk\OneDrive\Desktop\Emotionix version 2 backup\Emotionix\src\emotion_detection\voice_detection\src\emotion_detection\voice_detection\emotion_model.pkl"
+model_path = r"emotion_model.pkl"
 
 # Create the directory if it doesn't exist
 os.makedirs(os.path.dirname(model_path), exist_ok=True)
