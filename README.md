@@ -18,28 +18,6 @@ Spotify integration for music recommendations.
 User-Friendly Dash Web Interface:
 Built with Dash and styled using Dash Bootstrap Components for an elegant and responsive design.
 
-📁 Project Structure
-
-EMOTIONIX/
-├── data/                     # Data-related resources
-│   ├── audio/                # Audio files for training/analysis
-│   └── dataset/              # Dataset files
-├── src/                      # Source code directory
-│   ├── __pycache__/          # Compiled Python files (ignore or clean)
-│   ├── voice_detection/      # Voice detection module
-│   │   └── model/            # Submodule for voice model-related scripts
-│   │       ├── dataset_download.py # Script to download datasets
-│   │       └── train_model.py      # Script to train models
-│   ├── chatbot.py            # Chatbot implementation
-│   ├── face_detection.py     # Facial emotion detection logic
-│   ├── feedback.py           # Feedback generation module
-│   ├── recommend.py          # Recommendation system logic
-│   ├── text_detection.py     # Text emotion detection logic
-│   └── voice_detection.py    # Voice emotion detection logic
-├── .cache/                   # Cache files (temporary)
-├── app.py                    # Main Dash web application
-└── main.py                   # Entry point for running the project
-
 🚀 How to Run the Project
 
 Clone the Repository:
@@ -53,7 +31,7 @@ pip install -r requirements.txt
 Run the Application:
 Start the Dash application:
 python app.py
-Open your browser and navigate to http://127.0.0.1:8050.
+Open your browser and navigate to http://127.0.0.1:8888.
 
 🧰 Technologies Used
 Backend
