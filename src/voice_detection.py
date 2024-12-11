@@ -6,7 +6,7 @@ import librosa
 from sklearn.svm import SVC
 from scipy.io.wavfile import write
 
-MODEL_PATH = r"C:\Users\swath\Desktop\Final Year Project\src\voice_detection\model\emotion_model.pkl"
+MODEL_PATH = r"emotion_model.pkl"
 SAMPLE_RATE = 22050  
 DURATION = 15      
 
