@@ -3,12 +3,12 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 # Configure the Google Generative AI API key
-genai.configure(api_key="AIzaSyBa3RKxCrkmpaNknBlBtkcWuKG9chmWFK4")
+genai.configure(api_key="")
 
 # Spotify API credentials
-SPOTIFY_CLIENT_ID = "520b1245f80b43c0800347f9e7b79d3e"
-SPOTIFY_CLIENT_SECRET = "3b4335556a42483faf6170ca3904805d"
-REDIRECT_URI = "http://localhost:8501/callback"
+SPOTIFY_CLIENT_ID = ""
+SPOTIFY_CLIENT_SECRET = ""
+REDIRECT_URI = "http://localhost:8888/callback"
 
 # Set up Spotify API authentication
 sp = spotipy.Spotify(
